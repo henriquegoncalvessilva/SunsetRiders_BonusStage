@@ -7,9 +7,7 @@ public class HitEnemyBonusSunset : MonoBehaviour
     [SerializeField]
     Sprite spriteDie, spriteLive;
 
-    /*[SerializeField]
-    SpriteRenderer sprite;*/
-
+    
     [SerializeField]
     Animator anim;
 
@@ -32,16 +30,15 @@ public class HitEnemyBonusSunset : MonoBehaviour
 
         die = true;
         this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        Debug.LogError(this.gameObject.name);
-       StartCoroutine(Reset());
+        StartCoroutine(Reset());
 
     }
 
     IEnumerator Reset()
     {
+        
         this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        Debug.Log("Olá");
-      yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1);
         this.gameObject.SetActive(false);
         die = false;
         anim.SetBool("Die", false);
