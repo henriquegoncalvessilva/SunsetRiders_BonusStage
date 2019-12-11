@@ -43,7 +43,6 @@ public class BonusManager : MonoBehaviour
 
         if (list.Contains(randomPos)){
            
-           // Debug.Log("Já existe: " + randomPos);
 
             if (list.Count > 5) {
 
@@ -54,9 +53,7 @@ public class BonusManager : MonoBehaviour
                 {
                     foreach (GameObject enemys in enemysBoss)
                     {
-                        
-                        
-
+                
                         enemys.SetActive(false);
                         existsNumber = false;
 
@@ -72,12 +69,6 @@ public class BonusManager : MonoBehaviour
 
     }
 
-
-
-    void Update()
-    {
-
-    }
 
 
 }
